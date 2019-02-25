@@ -1,0 +1,52 @@
+{
+    "name": "fipps/contao-prefixfree-bundle",
+    "description": "Contao 4 Prefixfree Bundle",
+    "keywords": [
+        "Contao",
+        "prefixfree",
+        "css",
+        "vendor prefix",
+        "javascript"
+    ],
+    "type": "contao-bundle",
+    "homepage": "http://gitlab.fipps.de/contao/contao4/contao-prefixfree-bundle",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Arne Borchert",
+            "homepage": "https://www.fipps.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "http://gitlab.fipps.de/contao/contao4/contao-prefixfree-bundle/issues"
+    },
+    "require": {
+        "php": "^7.0",
+        "contao/core-bundle": "~4.4",
+        "contao-community-alliance/meta-palettes": "^2.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fipps\\PrefixfreeBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Fipps\\PrefixfreeBundle\\ContaoManager\\Plugin"
+    }
+}
